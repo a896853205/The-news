@@ -19,9 +19,6 @@
   a {
     text-decoration: none;
   }
-  a:hover {
-    color: $米橘;
-  }
   .clearfix::after {
     content: '';
     display: block;
@@ -30,18 +27,28 @@
     clear: both;
     visibility: hidden;
   }
+  .left {
+    float: left;
+  }
+  .middle {
+    margin: 0 auto;
+  }
 </style>
 
 <template>
   <div id="app">
 
     <router-view></router-view>
-  
+    <siteFooter></siteFooter>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import siteFooter from './components/footer.vue'
+  export default {
+    components: {
+      siteFooter
+    },
+    name: 'app'
+  }
 </script>
