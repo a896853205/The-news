@@ -16,6 +16,9 @@
   body {
     width: 100%;
   }
+  .main-view {
+    padding-top: 80px;
+  }
   a {
     text-decoration: none;
   }
@@ -33,20 +36,27 @@
   .middle {
     margin: 0 auto;
   }
+  .right {
+    float: right;
+  }
 </style>
 
 <template>
   <div id="app">
-
-    <router-view></router-view>
+    <headerCom></headerCom>
+    <div class="main-view">
+      <router-view></router-view>
+    </div>
     <siteFooter></siteFooter>
   </div>
 </template>
 
 <script>
   import siteFooter from './components/footer.vue'
+  import headerCom from './components/header'
   export default {
     components: {
+      headerCom,
       siteFooter
     },
     name: 'app'
