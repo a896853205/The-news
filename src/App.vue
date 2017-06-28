@@ -19,9 +19,6 @@
   a {
     text-decoration: none;
   }
-  a:hover {
-    color: $米橘;
-  }
   .clearfix::after {
     content: '';
     display: block;
@@ -30,18 +27,29 @@
     clear: both;
     visibility: hidden;
   }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
 </style>
 
 <template>
   <div id="app">
-
+    <div class="container">
+      <headerCom></headerCom>
+    </div>
     <router-view></router-view>
-  
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import headerCom from './components/header'
+  export default {
+    components: {
+      headerCom
+    },
+    name: 'app'
+  }
 </script>
