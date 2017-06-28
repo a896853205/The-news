@@ -36,6 +36,9 @@
   .right {
     float: right;
   }
+  .middle {
+    margin: 0 auto;
+  }
 </style>
 
 <template>
@@ -44,14 +47,19 @@
     <div class="main-view">
       <router-view></router-view>
     </div>
+
+    <router-view></router-view>
+    <siteFooter></siteFooter>
   </div>
 </template>
 
 <script>
   import headerCom from './components/header'
+  import siteFooter from './components/footer.vue'
   export default {
     components: {
-      headerCom
+      headerCom,
+      siteFooter
     },
     name: 'app'
   }
