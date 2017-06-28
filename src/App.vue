@@ -16,6 +16,9 @@
   body {
     width: 100%;
   }
+  .main-view {
+    padding-top: 80px;
+  }
   a {
     text-decoration: none;
   }
@@ -37,10 +40,10 @@
 
 <template>
   <div id="app">
-    <div class="container">
-      <headerCom></headerCom>
+    <headerCom></headerCom>
+    <div class="main-view">
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
   </div>
 </template>
 

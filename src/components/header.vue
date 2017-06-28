@@ -1,9 +1,15 @@
 <style scoped>
   .header {
     width: 100%;
-    height: 80px;
     color: rgb(153, 153, 153);
+    background: rgba(255,255,255,0.95);
     font-size: 14px;
+    position: fixed;
+  }
+  .header-inner {
+    width: 1030px;
+    height: 80px;
+    margin: 0 auto;
   }
   .sLogo {
     box-sizing: border-box;
@@ -33,21 +39,23 @@
 
 <template>
   <header class="header">
-    <img class="sLogo left" src="static/sLogo.png" alt="logo">
-    <img class="logo left" src="static/logo.png" alt="logo">
-    <div class="login-div right">
-      <div class="left">
-        <a href="">登录</a>
+    <div class="header-inner">
+      <img class="sLogo left" src="static/sLogo.png" alt="logo">
+      <img class="logo left" src="static/logo.png" alt="logo">
+      <div class="login-div right">
+        <div class="left">
+          <a href="">登录</a>
+        </div>
+        <div class="left">
+          <a href="">注册</a>
+        </div>
       </div>
-      <div class="left">
-        <a href="">注册</a>
-      </div>
+      <ul class="nav right">
+        <li>
+          <a href="">新闻</a>
+        </li>
+      </ul>
     </div>
-    <ul class="nav right">
-      <li>
-        <a href="">新闻</a>
-      </li>
-    </ul>
   </header>
 </template>
 
