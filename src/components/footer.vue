@@ -117,8 +117,8 @@ a.footer-rss {
             <a class="footer-weixin" href="" :style="followImgStyle"></a>
             <a class="footer-taobao" href="" :style="followImgStyle"></a>
             <a class="footer-qq" href="" :style="followImgStyle"></a>
-            <a href="footer-podcast" :style="followImgStyle"></a>
-            <a href="footer-rss" :style="followImgStyle"></a>
+            <a class="footer-podcast" :style="followImgStyle"></a>
+            <a class="footer-rss" :style="followImgStyle"></a>
           </p>
         </div>
         <p>All Rights Reserved 2009-2015 GAMECORES - Terms & Conditions 闽ICP备11023385号-1</p>
