@@ -21,6 +21,10 @@
   }
   a {
     text-decoration: none;
+    color: #000;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .clearfix::after {
     content: '';
