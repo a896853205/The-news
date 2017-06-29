@@ -59,29 +59,29 @@ p {
   display: inline-block;
 }
 @mixin tubiao($index: 0) {
-  $ypos: ($index * -60px) - 240px;
+  $ypos: $index * -60px;
   background-position: 0 $ypos !important;
   &:hover {
     background-position: 0 $ypos - 30px !important;
   }
 }
 a.footer-weibo {
-  @include tubiao(0);
+  @include tubiao(4);
 }
 a.footer-weixin {
-  @include tubiao(1);
+  @include tubiao(5);
 }
 a.footer-taobao {
-  background-position: 0 -180px;
+  @include tubiao(3);
 }
 a.footer-qq {
-  background-position: 0 -120px;
+  @include tubiao(2);
 }
 a.footer-podcast {
-  background-position: 0 -60px;
+  @include tubiao(1);
 }
 a.footer-rss {
-  background-position: 0 0px;
+  @include tubiao(0);
 }
 </style>
 
