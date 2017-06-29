@@ -43,6 +43,9 @@
   .right {
     float: right;
   }
+  .block {
+    display: block;
+  }
 </style>
 
 <template>
