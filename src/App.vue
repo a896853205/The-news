@@ -40,8 +40,13 @@
   .right {
     float: right;
   }
+<<<<<<< HEAD
   .middle {
     margin: 0 auto;
+=======
+  .block {
+    display: block;
+>>>>>>> 完成首页showcase-article组件
   }
 </style>
 
