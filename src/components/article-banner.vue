@@ -1,9 +1,10 @@
 <style scoped>
 .banner-background-inner {
   width: 100%;
-  height: 400px;
+  height: 440px;
   position: relative;
   color: #fff;
+  overflow-x: hidden;
 }
 .banner-background {
   height: 400px;
@@ -50,34 +51,50 @@
   height: 80px;
   box-sizing: border-box;
   position: absolute;
-  bottom: -40px;
+  bottom: 0px;
   left: 30%;
+}
+.article-banner {
+  margin-bottom: 40px;
 }
 </style>
 
 <template>
   <div class="article-banner">
     <div class="banner-background-inner">
-      <img class="banner-background" src="static/newsBanner.jpg" alt="">
+      <img class="banner-background" :src="data.titleImg" alt="">
       <div class="banner-filter"></div>
       <div class="title-inner">
         <h2 class="banner-title">
-          很久之前，我的梦想是成为一名上天入地的出租车司机
+          {{data.title}}
         </h2>
         <small>
-          其实现在可以去开滴滴快车
+          {{data.describe}}
         </small>
         <p>
-          2017-06-30 08:01:00
+          {{data.time}}
         </p>
       </div>
-      <img class="head-image" src="static/headImage.jpg" alt="">
+      <img class="head-image" :src="data.headImg" alt="">
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'article-banner'
+    name: 'article-banner',
+    props: {
+      data: {
+        default () {
+          return {
+            title: '很久之前，我的梦想是成为一名上天入地的出租车司机',
+            describe: '其实现在可以去开滴滴快车',
+            time: '2017-06-30 08:01:00',
+            titleImg: 'static/newsBanner.jpg',
+            headImg: 'static/headImage.jpg'
+          }
+        }
+      }
+    }
   }
 </script>
