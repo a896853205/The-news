@@ -105,7 +105,7 @@
       </span>
     </div>
     <div class="img">
-      <a href="" target='_blank' class="block">
+      <a href="http://localhost:8080/#/newsInfo" target='_blank' class="block">
         <img :src="data.newsImg" class="news-img" alt="">
         <div class="meta">
           <div class="author-info">
@@ -147,13 +147,13 @@ export default {
           time: '2017-06-29',
           category: {
             name: '也爱看电影',
-            href: 'http://www.g-cores.com/categories/30'
+            href: 'http://localhost:8080/#/newsInfo'
           },
           title: '演员，凯文·史派西',
           desc: '“最巧妙之处就是能让人相信他不存在”',
           newsImg: 'static/40b96fb7-7c51-4007-806c-f8627088eab1_hl.jpg',
           authorImg: 'static/aa080c8b-0b93-4370-96af-1e06afef697d_normal.png',
-          href: 'http://www.g-cores.com/articles/25637',
+          href: 'http://localhost:8080/#/newsInfo',
           like: '15',
           comments: '12'
         }

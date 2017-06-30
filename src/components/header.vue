@@ -5,6 +5,7 @@
     background: rgba(255,255,255,0.95);
     font-size: 14px;
     position: fixed;
+    z-index:9999;
   }
   .header-inner {
     width: 1030px;
