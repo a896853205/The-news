@@ -40,13 +40,11 @@
   .right {
     float: right;
   }
-<<<<<<< HEAD
   .middle {
     margin: 0 auto;
-=======
+  }
   .block {
     display: block;
->>>>>>> 完成首页showcase-article组件
   }
 </style>
 
@@ -56,8 +54,6 @@
     <div class="main-view">
       <router-view></router-view>
     </div>
-
-    <router-view></router-view>
     <siteFooter></siteFooter>
   </div>
 </template>
