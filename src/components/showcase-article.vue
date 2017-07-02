@@ -1,7 +1,9 @@
 <style lang="scss" scoped>
 .showcase {
-  margin-left: 15px;
-  margin-right: 15px;
+  padding: {
+    left: 15px;
+    right: 15px;
+  }
   float: left;
   .info {
     font-size: 12px;
@@ -65,7 +67,7 @@
     }
   }
   .text {
-    height: 130px;
+    height: 120px;
     overflow: hidden;
     h4 a{
       display: inline-block;
@@ -162,12 +164,12 @@ export default {
   },
   created () {
     if (this.size === 'middle') {
-      this.style.width = '485px'
+      this.style.width = '515px'
       this.style.height = '422px'
       this.spanTop = '40px'
     }
     if (this.size === 'small') {
-      this.style.width = '318.328px'
+      this.style.width = 1030 / 3 + 'px'
       this.style.height = '325px'
       this.spanTop = '20px'
     }
