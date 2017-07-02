@@ -37,11 +37,11 @@
   .left {
     float: left;
   }
-  .right {
-    float: right;
-  }
   .middle {
     margin: 0 auto;
+  }
+  .right {
+    float: right;
   }
   .block {
     display: block;

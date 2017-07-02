@@ -5,8 +5,15 @@
 <template>
   <div class="main">
     <div class="container clearfix">
-      <showcase-article></showcase-article>
       <showcase-article :size="'middle'"></showcase-article>
+      <showcase-article :size="'middle'"></showcase-article>
+      <showcase-article></showcase-article>
+      <showcase-article></showcase-article>
+      <showcase-article></showcase-article>
+      <showcase-article></showcase-article>
+      <showcase-article></showcase-article>
+      <showcase-article></showcase-article>
+      <showcase-article></showcase-article>
     </div>
   </div>
 </template>
