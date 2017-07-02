@@ -4,6 +4,7 @@
 
 <template>
   <div class="main">
+    <slide></slide>
     <div class="container clearfix">
       <showcase-article :size="'middle'"></showcase-article>
       <showcase-article :size="'middle'"></showcase-article>
@@ -20,9 +21,11 @@
 
 <script>
 import showcaseArticle from '../components/showcase-article'
+import slide from '../components/slide'
 export default {
   components: {
-    showcaseArticle
+    showcaseArticle,
+    slide
   }
 }
 </script>
