@@ -1,12 +1,13 @@
 <style scoped lang="scss">
   $blue: #49c8fd;
-  $s-width: 1226px;
-  $s-height: 460px;
+  $s-width: 100%;
+  $s-height: 420px;
   $borderRadius: 3px;
   $prev-position: -84px 50%;
   $prev-position-hover: 0px 50%;
   $next-position: -125px 50%;
   $next-position-hover: -42px 50%;
+  $左按钮left: 0px;
   @mixin slideSize ($s-width, $s-height) {
     width: $s-width;
     height: $s-height;
@@ -45,30 +46,39 @@
     }
   
     .switch-bar {
+      width: 100%;
       padding: 15px;
       position: absolute;
-      right: 0;
-      bottom: 5px;
+      // right: 0;
+      bottom: 10px;
       .switch-btn {
-        $rect: 10px;
+        $rect: 11px;
         width: $rect;
         height: $rect;
         float: left;
-        margin-right: 10px;
+        margin-right: 20px;
         border-radius: $rect/2;
-        background-color: #f3eae9;
+        background-color: rgba(0,0,0,0.4);
+        box-sizing: border-box;
+        border: 2px solid rgba(255,255,255,0.5);
         cursor: pointer;
         transition: 0.3s;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          @extend .cur;
+        }
       }
       .cur {
-        width: 25px;
-        background-color: #ff6041;
+        // width: 25px;
+        border-color: rgba(0,0,0,0.4);
+        background-color: rgba(255,255,255,0.4);
       }
     }
     $pn-btn-width: 41px;
     $pn-btn-height: 69px;
     $pn-btn-top: 147px;
-    $左按钮left: 234px;
     [name=prev-btn], [name=next-btn] {
       width: $pn-btn-width;
       height: $pn-btn-height;
@@ -101,25 +111,19 @@
       }
     }
   }
-  #prev {
-    left: -$s-width;
+  .slide ul{
+    position: relative;
   }
-  #next {
-    left: $s-width;
+  .slide img{
+    position: absolute;
+    left: 0;
   }
-.slide ul{
-  position: relative;
-}
-.slide img{
-  position: absolute;
-  left: 0;
-}
-.sfade-enter,.sfade-leave-active {
-  opacity: 0;
-}
-.sfade-enter-active, .sfade-leave-active {
-  transition: 0.3s;
-}
+  .sfade-enter,.sfade-leave-active {
+    opacity: 0;
+  }
+  .sfade-enter-active, .sfade-leave-active {
+    transition: 0.3s;
+  }
 </style>
 
 <template>
@@ -142,13 +146,12 @@
       </li>
     </ul>
     <div class="switch-bar">
-      <span class="switch-btn" v-for="(item, index) of slideNews" :class="{cur: index === nowIndex}" @click="goto(index)"></span>
+      <div class="middle clearfix" :style="`width: ${slideIndex * 32 - 20}px`">
+        <span class="switch-btn" v-for="(item, index) of slideNews" :class="{cur: index === nowIndex}" @click="goto(index)"></span>
+      </div>
     </div>
     <span name="prev-btn" :style="`background-image: url('static/icon-slides.png');`" @click="goto(prevIndex)"></span>
     <span name="next-btn" :style="`background-image: url('static/icon-slides.png');`" @click="goto(nextIndex)"></span>
-    <slot>
-
-    </slot>
   </div>
 </template>
 
@@ -203,6 +206,9 @@ export default {
       } else {
         return this.nowIndex + 1
       }
+    },
+    slideIndex () {
+      return this.slideNews.length
     }
   },
   methods: {
