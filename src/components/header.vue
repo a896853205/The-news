@@ -45,7 +45,7 @@
       <img class="logo left" src="static/logo.png" alt="logo">
       <div class="login-div right">
         <div class="left">
-          <a href="#/personInfo">登录</a>
+          <a href="#/login">登录</a>
         </div>
         <div class="left">
           <a href="">注册</a>
