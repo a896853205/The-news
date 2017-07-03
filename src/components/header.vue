@@ -5,7 +5,7 @@
     background: rgba(255,255,255,0.95);
     font-size: 14px;
     position: fixed;
-    z-index:9999;
+    z-index: 1;
   }
   .header-inner {
     width: 1030px;
@@ -41,8 +41,10 @@
 <template>
   <header class="header">
     <div class="header-inner">
-      <img class="sLogo left" src="static/sLogo.png" alt="logo">
-      <img class="logo left" src="static/logo.png" alt="logo">
+      <a href="#/">
+        <img class="sLogo left" src="static/sLogo.png" alt="logo">
+        <img class="logo left" src="static/logo.png" alt="logo">
+      </a>
       <div class="login-div right">
         <div class="left">
           <a href="#/login">登录</a>

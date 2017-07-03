@@ -32,6 +32,10 @@ export default new Router({
       component: personInfo,
       children: [
         {
+          path: '/personInfo/',
+          component: userInfo
+        },
+        {
           path: '/personInfo/userInfo',
           component: userInfo
         },

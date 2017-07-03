@@ -4,11 +4,7 @@
 
 <template>
   <div class="user-news">
-    <a href="">
-      <button>
-        我要投稿
-      </button>
-    </a>
+
   </div>
 </template>
 

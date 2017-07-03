@@ -121,10 +121,10 @@ button{
     </div>
     <div class="content">
       <div class="form-group">
-        <input v-model="userName" type="text" class="form-control" value placeholder="电话/邮箱/用户名">
+        <input v-model="userName" type="text" class="form-control" value placeholder="电话/邮箱/用户名" v-focus="userNameFocusState">
       </div>
       <div class="form-group">
-        <input v-model="passWord" type="password" class="form-control" value placeholder="密码">
+        <input v-model="passWord" type="password" class="form-control" value placeholder="密码" v-focus="passwordFocusState">
       </div>
       <div class="form-group">
         <a href="javascript:;" class="pull-right">
@@ -132,7 +132,7 @@ button{
         </a>
         <div class="form-check" style="overflow:hidden">
           <lable class="form-check-lable">
-            <input type="checkbox" name="remember" class="form-check-input" value>
+            <input type="checkbox" name="remember" class="form-check-input" value v-model="rememberMe">
             <small>记住我</small>
           </lable>
         </div>
@@ -158,8 +158,11 @@ export default {
   name: 'login',
   data () {
     return {
-      userName: '',
-      passWord: ''
+      userName: 'qc',
+      passWord: '123456',
+      rememberMe: true,
+      userNameFocusState: false,
+      passwordFocusState: false
     }
   },
   methods: {
@@ -170,11 +173,15 @@ export default {
      */
     loginTest () {
       if (this.userName === '') {
-        alert('用户名不能为空')
+        this.$message.error('用户名不能为空')
+        this.userNameFocusState = true
+        setTimeout(() => { this.userNameFocusState = false }, 500)
         return
       }
       if (this.passWord === '') {
-        alert('密码不能为空')
+        this.$message.error('密码不能为空')
+        this.passwordFocusState = true
+        setTimeout(() => { this.passwordFocusState = false }, 500)
         return
       }
       if (this.userName === 'qc' && this.passWord === '123456') {
@@ -197,6 +204,13 @@ export default {
       }).catch(function (res){
         alert('网络错误');
       }); */
+    }
+  },
+  directives: {
+    focus: {
+      update (el, {value}) {
+        if (value) el.focus()
+      }
     }
   }
 }
