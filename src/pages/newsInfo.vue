@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import ArticleBanner from '../components/article-banner'
-import ArticleContent from '../components/article-content'
+import ArticleBanner from '../components/article/banner'
+import ArticleContent from '../components/article/content'
 
 export default {
   components: {

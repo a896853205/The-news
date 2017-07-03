@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import main from '@/pages/main'
 import newsInfo from '@/pages/newsInfo'
 import personInfo from '@/pages/personInfo'
-import userInfo from '@/components/user-info'
-import userNews from '@/components/user-news'
+import userInfo from '@/components/user/info'
+import userNews from '@/components/user/news'
 import login from '@/pages/login'
 
 Vue.use(Router)
