@@ -25,6 +25,7 @@
 .person-info {
   background: #f7f7f7;
   overflow: hidden;
+  height: 600px;
 }
 .person-left {
   width: 270px;
@@ -36,6 +37,8 @@
 .person-right {
   width: calc(100% - 270px);
   float: left;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .left-nav a {
   color: #888;
