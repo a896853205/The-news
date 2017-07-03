@@ -70,7 +70,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#/contribution">
               我要投稿
             </a>
           </li>

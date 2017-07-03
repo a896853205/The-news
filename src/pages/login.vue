@@ -208,8 +208,8 @@ export default {
   },
   directives: {
     focus: {
-      update (el, {value}) {
-        if (value) el.focus()
+      update (el, binding) {
+        if (binding.value) el.focus()
       }
     }
   }
