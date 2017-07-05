@@ -108,7 +108,8 @@
       </span>
     </div>
     <div class="img">
-      <a href="http://localhost:8080/#/newsInfo" target='_blank' class="block">
+      <!-- http://localhost:8080/#/newsInfo -->
+      <a :href="data.href" target='_blank' class="block">
         <img :src="data.newsImage" class="news-img" alt="">
         <div class="meta">
           <div class="author-info">
@@ -156,7 +157,7 @@ export default {
           brief: '“最巧妙之处就是能让人相信他不存在”',
           newsImage: 'static/40b96fb7-7c51-4007-806c-f8627088eab1_hl.jpg',
           authorImg: 'static/aa080c8b-0b93-4370-96af-1e06afef697d_normal.png',
-          /* href: 'http://localhost:8080/#/newsInfo', */
+          href: '',
           like: '15',
           comments: '12'
         }
