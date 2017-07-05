@@ -79,7 +79,7 @@
     </div>
   </div>
 </template>
-\\\]
+
 <script>
   export default {
     name: 'article-banner',
