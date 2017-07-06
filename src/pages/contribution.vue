@@ -23,6 +23,7 @@ label {
   background: #eeeef0;
   color: #888;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .publish-action a{
   float: left;
@@ -58,12 +59,16 @@ label {
   height: 400px;
   width: 100%;
   background: #999 50% 50% repeat;
+  background-color: #48576A;
   color: #fff;
-  vertical-align: middle;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 .form-group {
   padding: 20px 20px 0;
-  width: 251px;
+  width: 250px;
 }
 .input {
     display: block;
@@ -77,9 +82,14 @@ label {
     background-image: none;
     border: 1px solid #f0f0f0;
     border-radius: 0;
-    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -webkit-transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+    -o-transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+    transition: border-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+      // box-shadow: none;
+      outline: 0px;
+    &:focus {
+      border: 1px solid #888;
+    }
 }
 .outer-uploader {
   height: 100px;
@@ -103,16 +113,15 @@ textarea.input {
 }
 .preview-title {
   font-size: 32px;
-  line-height: 1.2;
-  margin: 0 0 8px;
+  flex-basis: 50px;
+  font-family: '黑体';
+  font-weight: bold;
 }
 .preview-desc {
-  margin: 0 0 20px;
-  padding: 0 10%;
   max-width: 800px;
+  flex-basis: 60px;
 }
 .preview-info {
-  
 }
 .preview-body textarea {
   width: 80%;
@@ -162,7 +171,7 @@ textarea.input {
     <div class="preview">
       <div class="preview-header">
         <div class="preview-title">{{title}}</div>
-        <div class="priview-desc">{{desc}}</div>
+        <div class="preview-desc">{{desc}}</div>
         <div class="preview-info">2014-11-23 20:58</div>
       </div>
       <div class="preview-body">
