@@ -197,7 +197,7 @@ export default {
       }).then(function (res) {
         if (res.data === '1') {
           // 这里要有登录等待
-          window.location.href = '/#/personInfo'
+          window.location.href = '/#/personInfo?account=' + self.userName
         } else {
           self.$message.error('用户名或密码错误')
         }
